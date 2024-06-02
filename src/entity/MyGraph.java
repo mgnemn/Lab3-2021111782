@@ -2,10 +2,10 @@ package entity;
 
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.implementations.SingleGraph;
-import org.graphstream.ui.swing_viewer.SwingViewer;
-import org.graphstream.ui.view.Viewer;
+import org.graphstream.ui.swing_viewer.SwingViewer;//asuidhu
+import org.graphstream.ui.view.Viewer;//JSJansdjksad
 
-import java.awt.*;
+import java.awt.*;//jasidjaisdjas
 
 public class MyGraph extends SingleGraph {
 
