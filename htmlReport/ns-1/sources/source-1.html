@@ -1,0 +1,137 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=GBK"> 
+  <title>Coverage Report > MyGraphTest</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">test</a>
+</div>
+
+<h1>Coverage Summary for Class: MyGraphTest (test)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">MyGraphTest</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (12/12)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package test;
+&nbsp;
+&nbsp;import static org.junit.Assert.*;
+&nbsp;
+&nbsp;import graph.Generator;
+&nbsp;import graph.impl.GeneratorImpl;
+&nbsp;import graph.impl.Util;
+&nbsp;import java.io.File;
+&nbsp;import java.io.FileNotFoundException;
+&nbsp;import org.junit.Test;
+&nbsp;
+<b class="fc">&nbsp;public class MyGraphTest {</b>
+&nbsp;  @Test
+&nbsp;  public void testCalcShortestPath() throws FileNotFoundException {
+<b class="fc">&nbsp;    Generator graph = null;</b>
+<b class="fc">&nbsp;    String filepath = &quot;C:\\Users\\Administrator\\Desktop\\test1.txt&quot;;</b>
+<b class="fc">&nbsp;    graph = new GeneratorImpl(Util.getGraphFromFile(new File(filepath)));</b>
+&nbsp;
+&nbsp;    // Test case 1
+<b class="fc">&nbsp;    String result1 = graph.calcShortestPath(&quot;explore&quot;, &quot;life&quot;);</b>
+<b class="fc">&nbsp;    assertNotNull(result1);</b>
+<b class="fc">&nbsp;    assertFalse(result1.isEmpty());</b>
+&nbsp;
+&nbsp;    // Test case 2
+<b class="fc">&nbsp;    String result2 = graph.calcShortestPath(&quot;strange&quot;, &quot;civilizations&quot;);</b>
+<b class="fc">&nbsp;    assertNotNull(result2);</b>
+<b class="fc">&nbsp;    assertFalse(result2.isEmpty());</b>
+&nbsp;
+&nbsp;    // Test case 3
+<b class="fc">&nbsp;    String result3 = graph.calcShortestPath(&quot;nonexistent&quot;, &quot;life&quot;);</b>
+<b class="fc">&nbsp;    assertEquals(&quot;One of the specified nodes does not exist.&quot;, result3);</b>
+&nbsp;  }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-06-13 20:47</div>
+</div>
+</body>
+</html>
